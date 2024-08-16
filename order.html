@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+     <link rel="icon" href="icon-wine.png" type="image/png">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <nav>
+        <a href="product.html" class="back-link">
+          <span class="back-arrow">&larr;</span> Back
+        </a>
+        <h1>Place Your Order</h1>
+    </nav>
+
+    <section class="order-form-section">
+        <form id="order-form" action="https://formspree.io/f/xnnazgbr" method="POST">
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+            </div>
+
+             <div class="form-group">
+                 <label for="email"> Email: </label>
+                 <input type="email" id="email" name="email">
+             </div>
+            
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="Optional"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity of Bottles:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="order-date">Date of Order:</label>
+                <input type="date" id="order-date" name="order-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="custom-checkbox">
+                    <input type="checkbox" id="custom-checkbox" name="custom-checkbox">
+                    Do you want your bottle to be custom?
+                </label>
+            </div>
+
+            <div class="form-group" id="custom-upload-section" style="display: none;">
+                <label for="custom-image">Upload Your Design:</label>
+                   <input type="file" id="custom-image" name="custom-image" accept="image/*" multiple>
+            </div>
+            <div class="price">
+                <label class="price-label" for="quantity" id="Price">Price: 00.00</label>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Order</button>
+        </form>
+    </section>
+     
+    <div class="note">
+        <h4>Note*: We will call you to arrange the payment. If you do not receive a call within three days after placing your order, please feel free to contact us. <a href="contact.html">Contact</a> </h4>
+    </div>
+    
+
+    <footer>
+        <div class="footer-content">
+        <p>&copy; 2024 Sandy Sene. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="order.js"></script>
+</body>
+</html>
